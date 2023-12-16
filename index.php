@@ -123,9 +123,6 @@
     }
   }
 
-  /*.zalo-chat-widget {*/
-  /*    left: 0!important;*/
-  /*}*/
   .zalome {
     position: fixed;
     bottom: 15px;
@@ -223,16 +220,135 @@
     animation: glowing 1500ms infinite;
 
   }
+
+  /* icon git */
+  @media (max-width: 576px) {
+    .fb-customerchat {
+      display: none;
+    }
+  }
+
+  .git {
+    position: fixed;
+    top: 550px;
+    bottom: 20px;
+    right: 10px;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: #004A7F;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: -10px -10px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: #004A7F;
+      -webkit-box-shadow: 0 0 3px #004A7F;
+    }
+
+    50% {
+      background-color: #0094FF;
+      -webkit-box-shadow: 0 0 10px #0094FF;
+    }
+
+    100% {
+      background-color: #004A7F;
+      -webkit-box-shadow: 0 0 3px #004A7F;
+    }
+  }
+
+  @-moz-keyframes glowing {
+    0% {
+      background-color: #004A7F;
+      -moz-box-shadow: 0 0 3px #004A7F;
+    }
+
+    50% {
+      background-color: #0094FF;
+      -moz-box-shadow: 0 0 10px #0094FF;
+    }
+
+    100% {
+      background-color: #004A7F;
+      -moz-box-shadow: 0 0 3px #004A7F;
+    }
+  }
+
+  @-o-keyframes glowing {
+    0% {
+      background-color: #004A7F;
+      box-shadow: 0 0 3px #004A7F;
+    }
+
+    50% {
+      background-color: #0094FF;
+      box-shadow: 0 0 10px #0094FF;
+    }
+
+    100% {
+      background-color: #004A7F;
+      box-shadow: 0 0 3px #004A7F;
+    }
+  }
+
+  @keyframes glowing {
+    0% {
+      background-color: #004A7F;
+      box-shadow: 0 0 3px #004A7F;
+    }
+
+    50% {
+      background-color: #0094FF;
+      box-shadow: 0 0 10px #0094FF;
+    }
+
+    100% {
+      background-color: #004A7F;
+      box-shadow: 0 0 3px #004A7F;
+    }
+  }
+
+  .git {
+    z-index: 2;
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+
+  }
 </style>
 <?php require_once('inc/header.php') ?>
 
 <body class="layout-top-nav layout-fixed layout-navbar-fixed" style="height: auto;">
   <!-- Zalo 16:43p 16/12/2023 -->
-  <div class='zalome'><a href='http://zaloapp.com/qr/p/10635hpfjgklo' target='_blank'>
+  <div class='zalome'>
+    <a href='https://github.com/PhamSang1210/QLKS-PHP' target='_blank'>
       <img alt='icon zalo' src='uploads/icon/icon-zalo.png' />
-    </a></div>
-  <!-- end -->
+    </a>
 
+    <!-- GIT -->
+    <div class="git">
+      <div class='git'><a href='https://github.com/PhamSang1210/QLKS-PHP' target='_blank'>
+          <img style="width: 100%;
+    height: 100%;
+    border-radius: 50%;" alt='icon github' src='uploads/icon/git.png' />
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- end -->
   <!-- Fall snow -->
   <div class="snow-container"></div>
   <div style="height: 200vh;">
