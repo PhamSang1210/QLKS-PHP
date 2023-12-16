@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <form action="" id="update-form">
+        <input type="hidden" name="id" value="<?= isset($_GET['id']) ? $_GET['id'] : '' ?>">
+        <div class="form-group">
+            <small class="text-muted ">Trạng Thái</small>
+            <select name="status" id="status" class="form-control form-control-sm form-control-border" required>
+                <option value="0" <?= isset($_GET['status']) && $_GET['status'] == 0 ? "selected" : "" ?>>Chưa giải quyết
+                </option>
+                <option value="1" <?= isset($_GET['status']) && $_GET['status'] == 1 ? "selected" : "" ?>>Đã xác nhận
+                </option>
+                <option value="2" <?= isset($_GET['status']) && $_GET['status'] == 2 ? "selected" : "" ?>>Đã hủy
+                </option>
+            </select>
+        </div>
+    </form>
+</div>
+<script>
+    $(function () {
+        $('#update-form').submit(function (e) {
+            e.preventDefault()
+            var _this = $("#entry-form")
+            $('.pop-msg').remove()
+            var el = $('<div>')
+            el.addClass("pop-msg alert")
+            el.hide()
+            start_loader();
+            $.ajax({
+                url: _base_url_ + "classes/Master.php?f=update_reservation_status",
+                data: new FormData($(this)[0]),
+                cache: false,
+                contentType: false,
+                processData: false,
+                method: 'POST',
+                type: 'POST',
+                dataType: 'json',
+                error: err => {
+                    console.log(err)
+                    alert_toast("An error occured", 'error');
+                    end_loader();
+                },
+                success: function (resp) {
+                    if (resp.status == 'success') {
+                        location.reload();
+                    } else if (!!resp.msg) {
+                        el.addClass("alert-danger")
+                        el.text(resp.msg)
+                        _this.prepend(el)
+                    } else {
+                        el.addClass("alert-danger")
+                        el.text("Đã xảy ra lỗi không rõ nguyên nhân.")
+                        _this.prepend(el)
+                    }
+                    el.show('slow')
+                    $('html, body,.modal').animate({ scrollTop: 0 }, 'fast')
+                    end_loader();
+                }
+            })
+        })
+    })
+</script>
