@@ -1,4 +1,20 @@
+<style>
+    .connact__container {
+        position: relative;
+        right: -990px;
+        top: 150px;
+        z-index: 2;
+    }
+
+    .conntact__thumb_height {
+        height: 100px;
+        width: 100px;
+    }
+</style>
 <div class="col-12">
+    <div class="connact__container">
+        <img class="conntact__thumb_height" src="uploads/blogb-decor.png" alt="">
+    </div>
     <div class="row my-5 ">
         <div class="col-md-5">
             <div class="card card-outline card-navy rounded-0 shadow">

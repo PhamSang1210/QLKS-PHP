@@ -14,4 +14,7 @@ if (!defined('DB_PASSWORD'))
     define('DB_PASSWORD', "");
 if (!defined('DB_NAME'))
     define('DB_NAME', "orms_db1");
-?>
+if (!defined('contact_hotline'))
+    define('contact', "uploads/hotline-panda.png")
+
+        ?>

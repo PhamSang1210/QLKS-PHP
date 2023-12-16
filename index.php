@@ -296,7 +296,7 @@
     }
 
     100% {
-      background-color: #004A7F;
+      background-color: #004 A7F;
       box-shadow: 0 0 3px #004A7F;
     }
   }
@@ -312,6 +312,7 @@
       box-shadow: 0 0 10px #0094FF;
     }
 
+
     100% {
       background-color: #004A7F;
       box-shadow: 0 0 3px #004A7F;
@@ -325,6 +326,112 @@
     -o-animation: glowing 1500ms infinite;
     animation: glowing 1500ms infinite;
 
+  }
+
+  /* Hotline */
+  .header__hotline {
+    position: fixed;
+    top: 470px;
+    bottom: 20px;
+    right: 10px;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: #004A7F;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: -10px -10px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 3;
+  }
+
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: #004A7F;
+      -webkit-box-shadow: 0 0 3px #004A7F;
+    }
+
+    50% {
+      background-color: #0094FF;
+      -webkit-box-shadow: 0 0 10px #0094FF;
+    }
+
+    100% {
+      background-color: #004A7F;
+      -webkit-box-shadow: 0 0 3px #004A7F;
+    }
+  }
+
+  @-moz-keyframes glowing {
+    0% {
+      background-color: #004A7F;
+      -moz-box-shadow: 0 0 3px #004A7F;
+    }
+
+    50% {
+      background-color: #0094FF;
+      -moz-box-shadow: 0 0 10px #0094FF;
+    }
+
+    100% {
+      background-color: #004A7F;
+      -moz-box-shadow: 0 0 3px #004A7F;
+    }
+  }
+
+  @-o-keyframes glowing {
+    0% {
+      background-color: #004A7F;
+      box-shadow: 0 0 3px #004A7F;
+    }
+
+    50% {
+      background-color: #0094FF;
+      box-shadow: 0 0 10px #0094FF;
+    }
+
+    100% {
+      background-color: #004 A7F;
+      box-shadow: 0 0 3px #004A7F;
+    }
+  }
+
+  @keyframes glowing {
+    0% {
+      background-color: #004A7F;
+      box-shadow: 0 0 3px #004A7F;
+    }
+
+    50% {
+      background-color: #0094FF;
+      box-shadow: 0 0 10px #0094FF;
+    }
+
+
+    100% {
+      background-color: #004A7F;
+      box-shadow: 0 0 3px #004A7F;
+    }
+  }
+
+  .header__hotline {
+    z-index: 3;
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+
+  }
+
+  .header__hotline:hover {
+    cursor: pointer;
   }
 </style>
 <?php require_once('inc/header.php') ?>
@@ -345,9 +452,14 @@
         </a>
       </div>
     </div>
+
+    <!-- Hotline -->
   </div>
-
-
+  <section class="header__hotline">
+    <a href="tel:0988888888">
+      <img alt='icon hotline-panda' src='<?php echo contact ?>' />
+    </a>
+  </section>
   <!-- end -->
   <!-- Fall snow -->
   <div class="snow-container"></div>
