@@ -15,6 +15,11 @@ if (!defined('DB_PASSWORD'))
 if (!defined('DB_NAME'))
     define('DB_NAME', "orms_db1");
 if (!defined('contact_hotline'))
-    define('contact', "uploads/hotline-panda.png")
-
-        ?>
+    define('contact', "uploads/hotline-panda.png");
+if (!defined('tuan_loc'))
+    define('tuan_loc', "uploads/icon/tuanlocHome-92x54.png");
+if (!defined('decor-left'))
+    define('decor_left', 'uploads/decor/decor-left.png');
+if (!defined('decor-right'))
+    define('decor_right', 'uploads/decor/decor-right.png');
+?>

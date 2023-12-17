@@ -433,10 +433,58 @@
   .header__hotline:hover {
     cursor: pointer;
   }
+
+
+  .flying-deer {
+    width: 100px;
+    height: 100px;
+    background-image: url(<?php echo tuan_loc ?>);
+    background-size: contain;
+    position: absolute;
+    animation: fly 7s linear infinite;
+    z-index: 100;
+    background-repeat: no-repeat;
+    top: 500px;
+    /* bottom: -50px; */
+  }
+
+  @keyframes fly {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(1200px);
+    }
+  }
+
+  .decor_left {
+    position: fixed;
+    top: 50px;
+    z-index: 4;
+  }
+
+  .decor_right {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 4;
+  }
 </style>
 <?php require_once('inc/header.php') ?>
 
 <body class="layout-top-nav layout-fixed layout-navbar-fixed" style="height: auto;">
+
+  <!-- decor 1 -->
+  <header class="decor_left">
+    <img src="<?php echo decor_left ?>" alt="">
+  </header>
+  <!-- decor 2 -->
+  <header class="decor_right">
+    <img src="<?php echo decor_right ?>" alt="">
+  </header>
+  <!-- Tuan Loc Chay Qua -->
+  <div class="flying-deer"></div>
   <!-- Zalo 16:43p 16/12/2023 -->
   <div class='zalome'>
     <a href='https://github.com/PhamSang1210/QLKS-PHP' target='_blank'>
@@ -453,7 +501,7 @@
       </div>
     </div>
 
-    <!-- Hotline -->
+
   </div>
   <section class="header__hotline">
     <a href="tel:0988888888">
@@ -487,7 +535,7 @@
           </div>
         <?php endif; ?>
         <!-- Main content -->
-        <section class="content ">
+        <section style="background-color:#333;" class="content ">
           <div class="container">
             <?php
             if (!file_exists($page . ".php") && !is_dir($page)) {

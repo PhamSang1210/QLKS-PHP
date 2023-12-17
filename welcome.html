@@ -16,20 +16,224 @@
                 position: relative;
                 right: 0;
             }
+
+            /* Left welcome */
+
+            /* Loading */
+            .loading {
+                position: relative;
+                display: flex;
+                gap: 15px;
+            }
+
+            .loading span {
+                position: relative;
+                width: 5px;
+                height: 20px;
+            }
+
+            .loading span::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                animation: animate 8s linear infinite;
+                animation-delay: calc(var(--i) * 0.1s);
+            }
+
+            @keyframes animate {
+                0% {
+                    background: #0f0;
+                    box-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0,
+                        0 0 50px #0f0;
+                    rotate: 0deg;
+                }
+                20% {
+                    background: #0f0;
+                    box-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0,
+                        0 0 50px #0f0;
+                    rotate: 0deg;
+                }
+                40% {
+                    background: #0f0;
+                    box-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0,
+                        0 0 50px #0f0;
+                    rotate: 90deg;
+                    transform-origin: bottom;
+                    filter: hue-rotate(0deg);
+                }
+                80% {
+                    background: #0f0;
+                    box-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0,
+                        0 0 50px #0f0;
+                    rotate: 90deg;
+                    transform-origin: bottom;
+                    filter: hue-rotate(360deg);
+                }
+                90% {
+                    background: #000;
+                    box-shadow: none;
+                    rotate: 0deg;
+                }
+                90.1%,
+                100% {
+                    box-shadow: #000;
+                    box-shadow: none;
+                }
+            }
+
+            /* descruiption */
+            .description {
+                display: flex;
+                align-items: center;
+                margin-bottom: 100px;
+                z-index: 2;
+            }
+
+            .description__card_1 {
+                width: 300px;
+                height: 300px;
+                background-color: #ccc;
+                object-fit: contain;
+            }
+            .description__card_1-thumb {
+                height: 300px;
+                width: 300px;
+            }
+
+            .desc__1 {
+                margin-left: 20px;
+            }
+            .description {
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+                    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            }
+
+            .desc__layout {
+                position: relative;
+                top: 30px;
+            }
+
+            .event__desc {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 50px;
+                height: auto;
+            }
+
+            .event__desc-1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 320px;
+            }
+
+            .heading {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2px;
+                font-size: 20px;
+            }
         </style>
+
+        <header>
+            <div class="loading">
+                <span style="--i: 1"></span>
+                <span style="--i: 2"></span>
+                <span style="--i: 3"></span>
+                <span style="--i: 4"></span>
+                <span style="--i: 5"></span>
+                <span style="--i: 6"></span>
+                <span style="--i: 7"></span>
+                <span style="--i: 8"></span>
+                <span style="--i: 9"></span>
+                <span style="--i: 10"></span>
+                <span style="--i: 11"></span>
+                <span style="--i: 12"></span>
+                <span style="--i: 13"></span>
+                <span style="--i: 14"></span>
+                <span style="--i: 15"></span>
+                <span style="--i: 16"></span>
+                <span style="--i: 17"></span>
+                <span style="--i: 18"></span>
+                <span style="--i: 19"></span>
+                <span style="--i: 20"></span>
+            </div>
+        </header>
+
+        <section class="description">
+            <div class="description__card_1">
+                <img
+                    style="border-radius: 20px"
+                    class="description__card_1-thumb"
+                    src="uploads/saigon-halong-hotel.jpg"
+                    alt=""
+                />
+            </div>
+            <div class="desc__1">
+                <h2
+                    style="
+                        font-size: 20px;
+                        letter-spacing: 2.5px;
+                        color: #5a5858;
+                        line-height: 50px;
+                    "
+                >
+                    Với vị trí địa lý hợp lý cùng cảnh quan thiên nhiên,hoà mình
+                    cùng thiên nhiên khách sạn thừa hưởng được vị trí gần biển.
+                    Cung Cấp Cho Quý Khách dịch vụ Tốt Nhất
+                </h2>
+            </div>
+            <div class="description__card_1 desc__layout">
+                <img
+                    style="border-radius: 20px"
+                    class="description__card_1-thumb"
+                    src="uploads/285891250.jpg"
+                    alt=""
+                />
+            </div>
+        </section>
+
+        <!-- Event -->
+        <section class="event">
+            <h1 style="text-align: center">SỰ KIỆN CỦA CHÚNG TÔI</h1>
+            <img
+                style="width: 100%"
+                src="https://galaxyhalonghotel.com/Content/Img/img-baner-event.jpg"
+                alt=""
+            />
+            <div class="event__desc">
+                <div class="event__desc-1">
+                    <span class="heading">HỘI THẢO</span>
+                    <p class="desc">
+                        Phòng hội thảo: Nếu quý khách dự định tổ chức các cuộc
+                        họp, hội thảo, tọa đàm tại Hạ Long thì khách sạn Galaxy
+                        Hạ Long
+                    </p>
+                </div>
+                <div class="event__desc-1">
+                    <span class="heading">TIỆC</span>
+                    <p class="desc">
+                        Đội ngũ nhân viên chuyên nghiệp tại Khách sạn Galaxy Hạ
+                        Long sẽ giúp bạn lên kế hoạch và tổ chức các cuộc họp,
+                        hội nghị hoàn hảo.
+                    </p>
+                </div>
+                <div class="event__desc-1">
+                    <span class="heading">HỘI NGHỊ & SỰ KIỆN</span>
+                    <p class="desc">
+                        Khách sạn Galaxy Hạ Long có gần 200 m2 không gian hội
+                        họp bao gồm phòng Grand Ballroom và 1 phòng chức năng
+                        phục vụ tiệc chiêu đãi
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <article class="footer">
             <section class="container">
-                <h1>
-                    <span>w</span>
-                    <span>e</span>
-                    <span>l</span>
-                    <span>k</span>
-                    <span>o</span>
-                    <span>m</span>
-                    <span>m</span>
-                    <span>e</span>
-                    <span></span>
-                </h1>
                 <!-- <div
                     class="plugin__fanpage-iframe"
                     data-href="https://www.facebook.com/VinhHaLongQN/"
@@ -70,6 +274,7 @@
                         ></iframe
                     ></span>
                 </div> -->
+                <span>Địa Điểm Tổng Quan Của Khu Vực</span>
                 <iframe
                     src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FVinhHaLongQN%2F&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"
                     width="500"

@@ -36,11 +36,11 @@
 <div class="col-lg-12 py-5">
     <div class="contain-fluid">
         <div class="card card-outline card-dark shadow rounded-0">
-            <div class="card-body rounded-0">
+            <div class="card-body rounded-1">
                 <div class="container-fluid">
                     <h3 class="text-center">Chào Mừng Đến Với Hệ Thống</h3>
                     <hr>
-                    <div class="welcome-content">
+                    <div class="welcome-content h-[1000px]">
                         <?php include("welcome.html") ?>
                     </div>
                 </div>
