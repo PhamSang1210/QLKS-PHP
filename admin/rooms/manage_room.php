@@ -26,22 +26,22 @@ if (isset($_GET['id'])) {
                 <div class="form-group">
                     <label for="name" class="control-label">Name</label>
                     <input type="text" name="name" id="name" class="form-control form-control-border"
-                        placeholder="Enter room Name" value="<?php echo isset($name) ? $name : '' ?>" required>
+                        placeholder="Tên Phòng" value="<?php echo isset($name) ? $name : '' ?>" required>
                 </div>
                 <div class="form-group">
-                    <label for="type" class="control-label">Type</label>
-                    <select name="type" id="type" class="form-control form-control-border" placeholder="Enter room Name"
+                    <label for="type" class="control-label">Kiểu Phòng</label>
+                    <select name="type" id="type" class="form-control form-control-border" placeholder="Tên Phòng"
                         required>
-                        <option value="" <?= !isset($type) ? "selected" : '' ?> disabled> Please Select Here</option>
-                        <option <?= isset($type) && $type == 'Single' ? 'selected' : "" ?>>Single</option>
-                        <option <?= isset($type) && $type == 'Double' ? 'selected' : "" ?>>Double</option>
-                        <option <?= isset($type) && $type == 'Family' ? 'selected' : "" ?>>Family</option>
+                        <option value="" <?= !isset($type) ? "selected" : '' ?> disabled> Vui lòng chọn ở đây</option>
+                        <option <?= isset($type) && $type == 'Single' ? 'selected' : "" ?>>Phòng Đơn/option>
+                        <option <?= isset($type) && $type == 'Double' ? 'selected' : "" ?>>Phòng Đôi</option>
+                        <option <?= isset($type) && $type == 'Family' ? 'selected' : "" ?>>Gia Đình</option>
                     </select>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="price" class="control-label">Price</label>
+                    <label for="price" class="control-label">Giá</label>
                     <input type="number" step="any" name="price" id="price"
                         class="form-control form-control-border text-right"
                         value="<?php echo isset($price) ? $price : 0 ?>" required>
@@ -50,26 +50,26 @@ if (isset($_GET['id'])) {
                     <label for="status" class="control-label">Status</label>
                     <select name="status" id="status" class="form-control form-control-border"
                         placeholder="Enter room Name" required>
-                        <option value="1" <?= isset($status) && $status == 1 ? 'selected' : "" ?>>Active</option>
-                        <option value="0" <?= isset($status) && $status == 0 ? 'selected' : "" ?>>Inactive</option>
+                        <option value="1" <?= isset($status) && $status == 1 ? 'selected' : "" ?>>Kích Hoạt</option>
+                        <option value="0" <?= isset($status) && $status == 0 ? 'selected' : "" ?>>Chưa Kích Hoạt</option>
                     </select>
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="description" class="control-label">Description</label>
+            <label for="description" class="control-label">Mô Tả</label>
             <textarea row="3" name="description" id="description"
                 class="form-control form-control-border text-right summernote"
                 required><?php echo isset($description) ? html_entity_decode($description) : '' ?></textarea>
         </div>
 
         <div class="form-group col-md-6">
-            <label for="" class="control-label">Image</label>
+            <label for="" class="control-label">Ảnh</label>
             <div class="custom-file">
                 <input type="file" class="custom-file-input rounded-circle" id="customFile" name="img"
                     onchange="displayImg(this,$(this))">
-                <label class="custom-file-label" for="customFile">Choose file</label>
+                <label class="custom-file-label" for="customFile">Chọn tệp tin</label>
             </div>
         </div>
         <div class="form-group col-md-6 d-flex justify-content-center">
@@ -131,7 +131,7 @@ if (isset($_GET['id'])) {
                 dataType: 'json',
                 error: err => {
                     console.log(err)
-                    alert_toast("An error occured", 'error');
+                    alert_toast("Đã xảy ra lỗi", 'error');
                     end_loader();
                 },
                 success: function (resp) {
@@ -143,7 +143,7 @@ if (isset($_GET['id'])) {
                         _this.prepend(el)
                     } else {
                         el.addClass("alert-danger")
-                        el.text("An error occurred due to unknown reason.")
+                        el.text("Đã xảy ra lỗi không rõ nguyên nhân.")
                         _this.prepend(el)
                     }
                     el.show('slow')

@@ -100,10 +100,10 @@
 			uni_modal("Cập Nhật Thông Tin Phòng", "rooms/manage_room.php?id=" + $(this).attr('data-id'), 'large')
 		})
 		$('.delete_data').click(function () {
-			_conf("Are you sure to delete this Room permanently?", "delete_room", [$(this).attr('data-id')])
+			_conf("Bạn có chắc chắn xóa Phòng này vĩnh viễn không?", "delete_room", [$(this).attr('data-id')])
 		})
 		$('.view_data').click(function () {
-			uni_modal("Room Details", "rooms/view_room.php?id=" + $(this).attr('data-id'))
+			uni_modal("Chi tiết phòng", "rooms/view_room.php?id=" + $(this).attr('data-id'))
 		})
 		$('.table td, .table th').addClass('py-1 px-2 align-middle')
 		$('.table').dataTable({
