@@ -7,16 +7,22 @@
     </head>
     <body>
         <style>
+            * {
+                box-sizing: border-box;     
+            }
             .container {
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
-            }
-            .plugin__fanpage-iframe {
+                /* align-items: center; */
+                /* background-color:#ccc; */
                 position: relative;
                 right: 0;
             }
-
+            .container_1 {
+                padding-top: 20px;
+                height: 960px;
+                background-color: #ccc;
+            }
             /* Left welcome */
 
             /* Loading */
@@ -135,7 +141,164 @@
                 align-items: center;
                 margin-bottom: 2px;
                 font-size: 20px;
+                font-weight: 650;
             }
+
+            .service {
+                background-color: #ccc;
+                padding: 20px 0;
+                margin-bottom: 50px;
+                border-radius: 12px;
+            }
+            .service__thumb {
+                display: flex;
+                justify-content: center;
+                /* align-items: center; */
+                margin-bottom: 25px;
+            }
+            .service__desc {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 25px;
+            }
+
+            /* Suite */
+            .suite__rows {
+                display: flex;
+            }
+
+            /* .suite__rows section {
+                margin: 0;
+            } */
+
+            .suite__image_1 {
+                margin: 0 !important;
+                width: 250px;
+                height: 499px;
+                /* padding-right:20px; */
+                object-fit: cover;
+            }
+            .suite__image_2 {
+                margin: 0 !important;
+                width: 250px;
+                height: 499px;
+                object-fit: cover;
+            }
+            .suite__image_3 {
+                margin: 0 !important;
+                width: 250px;
+                height: 499px;
+                object-fit: cover;
+            }
+            .suite__image_4 {
+                margin: 0 !important;
+                width: 250px;
+                height: 499px;
+                object-fit: cover;
+            }
+
+
+            /* NOEL WELCOME 2023 17/12/2023 15:15 */
+            img{user-select: none;}
+            .app-container{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Lato';
+            font-size: 18px;
+            }
+
+            @keyframes jumpSpin{
+            0% {transform: scale(1, 1);}
+            10% {transform: scale(1.15, 0.75);}
+            20% {
+                transform-origin: center;
+                transform: scale(0.9, 1.2) translateY(-150px) rotateZ(365deg);}
+            30% {
+                transform: scale(0.9, 1.1) translateY(0px) rotateZ(360deg);}
+            35% {
+                transform: scale(1.1, 0.8) translateY(50px) rotateZ(360deg);}
+            40% {
+                transform: translateY(0px) rotateZ(360deg);}
+            65% {
+                transform: skew(-5deg, 0deg) translateX(240px) rotateZ(360deg);
+            }
+            70%{transform: skew(5deg,0deg) translateX(240px) rotateZ(360deg);}
+            75%{transform: translateX(240px) rotateZ(360deg);}
+            100% {
+                transform: scale(1, 1) rotateZ(360deg);}
+            }
+
+            @keyframes txtReveal{
+            0%{
+                
+            }
+            55%{
+                opacity: 0;
+            }
+            
+            70%{
+                opacity: 1;
+                transform: translateX(-300px);
+            }
+            80%{
+                opacity: 1;
+                transform: translateX(-300px);
+            }
+            
+            100%{
+                transform: translateX(-500px);
+                opacity: 0;
+            }
+            }
+
+            img[lovin-it]{
+            height: 240px;
+            z-index: 10;
+            background: #db1020;
+            transform-origin: bottom;
+            animation: jumpSpin 2.5s infinite ease-in-out ;
+            }
+
+            p[mmmmmm]{
+            opacity: 0;
+            font-size: 24px;
+            /* font-weigth: thin; */
+            animation: txtReveal 2.5s infinite ease-in-out;
+            }
+
+            /* Google map */
+            .google_map {
+                display: flex;
+                flex-direction: row-reverse;
+                column-gap: 10px;
+            }
+
+            /* Social */
+            .social__contact img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .social__contact {
+                display: flex;
+                /* justify-content: space-around; */
+                align-items: center;
+                position: relative;
+                bottom: -190px;
+                /* align-self: flex-end; */
+            }
+
+            .social__booking {
+                width: 200px;
+            }
+            /* .social__facebook {
+                width: 50px;
+                height: 50px;
+            } */
         </style>
 
         <header>
@@ -161,6 +324,7 @@
                 <span style="--i: 19"></span>
                 <span style="--i: 20"></span>
             </div>
+
         </header>
 
         <section class="description">
@@ -232,8 +396,76 @@
             </div>
         </section>
 
-        <article class="footer">
-            <section class="container">
+        <!-- service -->
+        <div class="service">
+            <div class="service__desc">
+                <h1 style="text-align: center">DỊCH VỤ CỦA CHÚNG TÔI</h1>
+
+                <h5 style="text-align: center"></h5>
+                    Đến với chúng tôi bạn sẽ nhận được những dịch vụ và ưu đãi
+                    tốt nhất
+                </h5>
+            </div>
+            <div class="service__thumb">
+                <ul>
+                    <li>Truyền hình cáp</li>
+                    <li>Giường</li>
+                    <li>Quầy bar nhỏ</li>
+                    <li>Dọn phòng: 2 lần/ngày</li>
+                    <li>Nhận phòng VIP theo yêu cầu</li>
+                    <li>Hai chai nước uống miễn phí hàng ngày</li>
+                </ul>
+                <ul>
+                    <li>Vòi sen</li>
+                    <li>Máy sấy tóc</li>
+                    <li>Dịch vụ đánh giày miễn phí hàng ngày</li>
+                    <li>Cà phê & amp; trà</li>
+                </ul>
+                <ul>
+                    <li>Hệ thống khóa tự động</li>
+                    <li>Nước nóng</li>
+                    <li>Tạp chí văn hóa bằng tiếng Anh</li>
+                    <li>Dịch vụ giặt/ủi</li>
+                </ul>
+                <ul>
+                    <li>Điện thoại</li>
+                    <li>Wifi miễn phí</li>
+                    <li>Quầy bar nhỏ</li>
+                    <li>Dịch vụ văn phòng</li>
+                    <li>Dịch vụ phòng</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Suite -->
+        <div class="suite">
+            <h1 style="text-align: center;">PHÒNG TRƯNG BÀY CỦA CHÚNG TÔI</h1>
+            <!-- 1 -->
+            <div class="suite__rows">
+                <section class="suite__thumb1">
+                    <img class="suite__image_1" src="uploads/suite/Suite 1.jpg" alt="">
+                </section>
+                <!-- 2 -->
+                <section class="">
+                    <img  class="suite__image_2" src="uploads/suite/suite2.jpg" alt="">
+                </section>
+                <!-- 3 -->
+                <section class="suite__thumb1">
+                    <img class="suite__image_3" src="uploads/suite/suite3.jpg" alt="">
+                </section>
+                <!-- 4 -->
+                <section class="suite__thumb1">
+                    <img class="suite__image_4" src="uploads/suite/suite4.jpg" alt="">
+                </section>
+            </div>
+        </div>
+
+        <!-- Fanpage -->
+        <!-- Item 1 -->
+        <div style="font-size: 3rem;font-weight: 600;margin-top: 35px;text-align: center;">Giao Lưu Với Chúng Tôi</div>
+        <!-- Item 2 -->
+        <article style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;" class="footer">
+            <section  class="container container_1">
                 <!-- <div
                     class="plugin__fanpage-iframe"
                     data-href="https://www.facebook.com/VinhHaLongQN/"
@@ -274,22 +506,57 @@
                         ></iframe
                     ></span>
                 </div> -->
-                <span>Địa Điểm Tổng Quan Của Khu Vực</span>
-                <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FVinhHaLongQN%2F&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"
-                    width="500"
-                    height="500"
-                    style="border: none; overflow: hidden"
-                    scrolling="no"
-                    frameborder="0"
-                    allowfullscreen="true"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                ></iframe>
+                <div class="noel__welcome_2023">
+                    <!-- Tuan Loc -->
+                    <img style="width: 500px;" src="uploads/tuanloc_1.png" alt="">
+                    <div style="margin-top:-210px;" class='app-container'>
+                        <img src="uploads/noel2023/onggia_noel_1.png" draggable="false" lovin-it></img>
+                        <p style="font-size: 2rem;color: red;" >Giáng Sinh Vui Vẻ <br> Happy New Year  </p>
+                    </div>
+                </div>
+                <article>
+                    <h1 style="color: red;text-align: center;">Fanpage Của Chúng Tôi</h1>
+                    <!-- Facebook -->
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FVinhHaLongQN&tabs=timeline&width=500&height=800&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId" width="500" height="800" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </article>
             </section>
         </article>
 
         <!--Google map -->
-        <iframe
+        <section style="margin-top: 50px;" class="google_map">
+            <!-- heading -->
+            <div>
+                <article style="width: 420px;">
+                    <h1>Địa điểm khu vực của chúng tôi</h1>
+                    <!-- Description -->
+                    <p style="margin-top: 20px;font-size: 1.2rem;">
+                        LV11-12 Sun Premier Village shophouse, Thành phố Hạ Long, Quảng Ninh
+                    </p>
+                    <span style="font-size: 1.2rem;">Số điện thoại: 0973 883 668</span>
+                </article>
+                <div class="social__contact">
+                    <!-- 1 -->
+                    <a href="https://www.facebook.com/VinhHaLongQN" target="_blank">
+                        <img class="social__facebook" src="uploads/social/facebook.png" alt="">
+                    </a >
+                    <!-- 2 -->
+                    <a href="https://www.instagram.com/thisisbillgates/?hl=en" target="_blank">
+                        <img class="social__facebook" src="uploads/social/instagram.png" alt="">
+                    </a>
+                    <!-- 3 -->
+                    <a href="https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                        <img class="social__facebook" src="uploads/social/twitter.webp" alt="">
+                    </a >
+                    <!-- 4 -->
+                    <a href="">
+                        <img class="social__facebook" src="uploads/social/booking.png" alt="">
+                    </a >
+                </div>
+            </div>
+
+
+            <!-- Map -->
+            <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14164.953930273085!2d107.048225112265!3d20.96949873099509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1702725985037!5m2!1sen!2s"
             width="600"
             height="450"
@@ -298,5 +565,9 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+
+        <!-- Icon contact -->
+        
+    </section>
     </body>
 </html>

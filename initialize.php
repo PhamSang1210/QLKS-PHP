@@ -22,4 +22,8 @@ if (!defined('decor-left'))
     define('decor_left', 'uploads/decor/decor-left.png');
 if (!defined('decor-right'))
     define('decor_right', 'uploads/decor/decor-right.png');
+if (!defined('suite1'))
+    define('suite_1', "uploads/Suite 1.jpg");
+if (!defined('suite2'))
+    define('suite_2', "uploads/Suite 1.jpg");
 ?>

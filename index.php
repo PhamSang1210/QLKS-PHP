@@ -68,6 +68,7 @@
     pointer-events: none;
   }
 
+
   .snowflake {
     position: absolute;
     background-color: white;
@@ -230,7 +231,7 @@
 
   .git {
     position: fixed;
-    top: 550px;
+    top: 568px;
     bottom: 20px;
     right: 10px;
     margin: 10px;
@@ -331,7 +332,7 @@
   /* Hotline */
   .header__hotline {
     position: fixed;
-    top: 470px;
+    top: 500px;
     bottom: 20px;
     right: 10px;
     margin: 10px;
@@ -470,6 +471,19 @@
     right: 0;
     z-index: 4;
   }
+
+  #goTop {
+    height: 25px;
+    background-color: red;
+    width: 20px;
+    /* height: 20px; */
+    position: fixed;
+    right: 30px;
+    top: 0;
+    bottom: 50px;
+  }
+
+  /* Go to top */
 </style>
 <?php require_once('inc/header.php') ?>
 
@@ -607,6 +621,7 @@
         </div>
       </div>
       <!-- /.content-wrapper -->
+      <button id="goTop"></button>
       <?php require_once('inc/footer.php') ?>
 
       <script>
@@ -692,6 +707,20 @@
           document.addEventListener("visibilitychange", handleVisibilityChange);
         });
 
+      </script>
+
+      <script>
+        const gotoTop = document.getElementById('button');
+        gotoTop.addEventListener('scroll', () => {
+          if (window.innerHeight > 50) {
+            gotoTop.classList.add('none');
+          } else {
+            gotoTop.classList.remove('none')
+          }
+        })
+        gotoTop.addEventListener('click', () => {
+          window.innerHeight = 0;
+        })
       </script>
 </body>
 

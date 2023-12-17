@@ -6,19 +6,30 @@
         flex-direction: column;
         height: 80vh;
     }
+    .not__found_color:hover {
+        color: red;
+    }
 </style>
 <div class="not__found-flex error-content mt-4">
     <section>
         <img src="uploads/notfound.jpg" alt="" />
     </section>
     <div>
-        <h3>
+        <h3 style="color: #fff">
             <i class="fas fa-exclamation-triangle text-danger"></i>
             Lỗi ! Không tìm thấy trang vui lòng quay lại
-            <a href="http://localhost/orms/"> trang chủ </a>.
+            <a
+                style="text-transform: uppercase"
+                class="not__found_color"
+                href="http://localhost/orms/"
+            >
+                trang chủ </a
+            >.
         </h3>
     </div>
     <div>
-        <p>We could not find the page you were looking for.</p>
+        <p style="color: #fff">
+            We could not find the page you were looking for.
+        </p>
     </div>
 </div>

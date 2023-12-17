@@ -94,10 +94,10 @@
 <script>
 	$(document).ready(function () {
 		$('#create_new').click(function () {
-			uni_modal("Add New room", "rooms/manage_room.php", 'large')
+			uni_modal("Thêm Phòng Mới", "rooms/manage_room.php", 'large')
 		})
 		$('.edit_data').click(function () {
-			uni_modal("Update Room Details", "rooms/manage_room.php?id=" + $(this).attr('data-id'), 'large')
+			uni_modal("Cập Nhật Thông Tin Phòng", "rooms/manage_room.php?id=" + $(this).attr('data-id'), 'large')
 		})
 		$('.delete_data').click(function () {
 			_conf("Are you sure to delete this Room permanently?", "delete_room", [$(this).attr('data-id')])
