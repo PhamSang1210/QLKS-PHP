@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <html lang="en" class="" style="height: auto;">
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   #header {
     height: 70vh;
     width: calc(100%);
@@ -113,7 +117,7 @@
   .banner__noel {
     position: fixed;
     bottom: -60px;
-    left: -80px;
+    left: -155px;
     z-index: 1;
   }
 
@@ -231,7 +235,7 @@
 
   .git {
     position: fixed;
-    top: 568px;
+    top: 530px;
     bottom: 20px;
     right: 10px;
     margin: 10px;
@@ -332,7 +336,7 @@
   /* Hotline */
   .header__hotline {
     position: fixed;
-    top: 500px;
+    top: 460px;
     bottom: 20px;
     right: 10px;
     margin: 10px;
@@ -472,23 +476,49 @@
     z-index: 4;
   }
 
-  #goTop {
-    height: 25px;
-    background-color: red;
-    width: 20px;
-    /* height: 20px; */
-    position: fixed;
-    right: 30px;
-    top: 0;
-    bottom: 50px;
-  }
+
 
   /* Go to top */
+  a {
+    text-decoration: none;
+  }
+
+  i.fa-angle-double-up {
+    position: fixed;
+    top: 89%;
+    left: 90%;
+    z-index: 999;
+    color: #fff;
+    background: #000;
+    font-size: 30px;
+    padding: 8px 13px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px #000;
+    transition: 0.3s;
+  }
+
+  i.fa-angle-double-up:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 5px #000;
+  }
+
+  .gotoTop {
+    /* display: ; */
+  }
+
+  .hidden {
+    display: none;
+  }
 </style>
 <?php require_once('inc/header.php') ?>
 
 <body class="layout-top-nav layout-fixed layout-navbar-fixed" style="height: auto;">
 
+  <!-- go to top -->
+  <a onclick="goToTop()" class="gotoTop hidden" href="#">
+    <i class="fa fa-angle-double-up"></i>
+  </a>
   <!-- decor 1 -->
   <header class="decor_left">
     <img src="<?php echo decor_left ?>" alt="">
@@ -504,7 +534,6 @@
     <a href='https://github.com/PhamSang1210/QLKS-PHP' target='_blank'>
       <img alt='icon zalo' src='uploads/icon/icon-zalo.png' />
     </a>
-
     <!-- GIT -->
     <div class="git">
       <div class='git'><a href='https://github.com/PhamSang1210/QLKS-PHP' target='_blank'>
@@ -559,7 +588,6 @@
                 include $page . '/index.php';
               else
                 include $page . '.php';
-
             }
             ?>
           </div>
@@ -710,18 +738,7 @@
       </script>
 
       <script>
-        const gotoTop = document.getElementById('button');
-        gotoTop.addEventListener('scroll', () => {
-          if (window.innerHeight > 50) {
-            gotoTop.classList.add('none');
-          } else {
-            gotoTop.classList.remove('none')
-          }
-        })
-        gotoTop.addEventListener('click', () => {
-          window.innerHeight = 0;
-        })
-      </script>
-</body>
 
-</html>
+</body >
+
+</html >

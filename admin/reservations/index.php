@@ -69,7 +69,7 @@
 									<button type="button"
 										class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon"
 										data-toggle="dropdown">
-										Action
+										Lựa Chọn
 										<span class="sr-only">Toggle Dropdown</span>
 									</button>
 									<div class="dropdown-menu" role="menu">

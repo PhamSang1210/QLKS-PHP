@@ -10,6 +10,7 @@ if (isset($_GET['id'])) {
     }
 }
 ?>
+
 <style>
     #banner-img {
         object-fit: scale-down;
@@ -61,14 +62,13 @@ if (isset($_GET['id'])) {
                             if (isset($status)) {
                                 switch ($status) {
                                     case '1':
-                                        echo '<span class="px-4 badge badge-success rounded-pill">Active</span>';
+                                        echo '<span class="px-4 badge badge-success rounded-pill">Kích Hoạt</span>';
                                         break;
                                     case '0':
-                                        echo '<span class="px-4 badge badge-danger rounded-pill">Inactive</span>';
+                                        echo '<span class="px-4 badge badge-danger rounded-pill">Chưa Kích Hoạt</span>';
                                         break;
                                 }
                             }
-
                             ?>
 
                         </dd>

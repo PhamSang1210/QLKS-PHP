@@ -84,6 +84,7 @@
 
     .section__form-img {
       top: -120px;
+      right: 20px;
     }
 
     .card {
@@ -91,11 +92,6 @@
       cursor: pointer;
     }
 
-    .section__item-img {
-      cursor: pointer;
-      pointer-events: none;
-      z-index: 999;
-    }
 
     /* form login style */
     .login-box {
@@ -337,19 +333,6 @@
     }
 
     //snow fall
-    /* body,
-    html {
-      margin: 0;
-      padding: 0;
-      background-color: rgba(20, 20, 25, 1);
-    } */
-
-    /* body,
-    html {
-      overflow-x: hidden;
-      width: 100vw;
-      height: auto;
-    } */
 
     .snow-container {
       position: fixed;
@@ -401,9 +384,164 @@
         transform: translate(10vw, 100vh);
       }
     }
+
+    /* tree */
+    .tree__noel {
+      position: fixed;
+      top: 24%;
+      left: 35%;
+      width: 150px;
+      height: 150px;
+    }
+
+    @keyframes background-gradient {
+      from {
+        left: -500px;
+      }
+
+      to {
+        left: calc(100% + 500px);
+      }
+    }
+
+    #tree-container {
+      height: 60vh;
+      aspect-ratio: 1 / 1;
+      overflow: visible;
+    }
+
+    #tree {
+      stroke: #82e485;
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 904;
+      animation: appear 16s cubic-bezier(0.65, 0, 0.35, 1) forwards infinite;
+    }
+
+    @keyframes appear {
+      0% {
+        stroke: #82e485;
+        stroke-dashoffset: 904;
+        filter: drop-shadow(var(--mouse-x) var(--mouse-y) 0 #82e485);
+      }
+
+      25%,
+      50% {
+        stroke: #82e485;
+        stroke-dashoffset: 0;
+        filter: drop-shadow(var(--mouse-x) var(--mouse-y) 6px #82e485);
+      }
+
+      75%,
+      100% {
+        stroke: transparent;
+        stroke-dashoffset: -904;
+        filter: drop-shadow(var(--mouse-x) var(--mouse-y) 0 #82e485);
+      }
+    }
+
+    .star {
+      fill: var(--color);
+      transform: translate(var(--x), var(--y)) scale(var(--scale));
+      animation: disappear 1.6s ease forwards;
+    }
+
+    @keyframes disappear {
+      from {
+        opacity: 1;
+        transform: translate(var(--x), var(--y)) scale(var(--scale));
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(calc(var(--x) + var(--offset-x)),
+            calc(var(--y) + var(--offset-y))) scale(var(--scale));
+      }
+    }
+
+
+
+    @keyframes background-gradient {
+      from {
+        left: -500px;
+      }
+
+      to {
+        left: calc(100% + 500px);
+      }
+    }
+
+    #tree-container {
+      height: 60vh;
+      aspect-ratio: 1 / 1;
+      overflow: visible;
+    }
+
+    #tree {
+      stroke: #82e485;
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 904;
+      animation: appear 16s cubic-bezier(0.65, 0, 0.35, 1) forwards infinite;
+    }
+
+    @keyframes appear {
+      0% {
+        stroke: #82e485;
+        stroke-dashoffset: 904;
+        filter: drop-shadow(var(--mouse-x) var(--mouse-y) 0 #82e485);
+      }
+
+      25%,
+      50% {
+        stroke: #82e485;
+        stroke-dashoffset: 0;
+        filter: drop-shadow(var(--mouse-x) var(--mouse-y) 6px #82e485);
+      }
+
+      75%,
+      100% {
+        stroke: transparent;
+        stroke-dashoffset: -904;
+        filter: drop-shadow(var(--mouse-x) var(--mouse-y) 0 #82e485);
+      }
+    }
+
+    .star {
+      fill: var(--color);
+      transform: translate(var(--x), var(--y)) scale(var(--scale));
+      animation: disappear 1.6s ease forwards;
+    }
+
+    @keyframes disappear {
+      from {
+        opacity: 1;
+        transform: translate(var(--x), var(--y)) scale(var(--scale));
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(calc(var(--x) + var(--offset-x)),
+            calc(var(--y) + var(--offset-y))) scale(var(--scale));
+      }
+    }
+
+    @media screen and (orientation: portrait) {
+      #tree-container {
+        height: 80vw;
+      }
+    }
   </style>
   <div class="snow-container"></div>
   <div style="height: 100vh;">
+    <div class="tree__noel">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" id="tree-container">
+        <path id="tree"
+          d="M33 241.296C50.5166 213.121 62.3807 197.711 87.5818 170.985C76.1414 168.043 69.0111 167.786 54.4182 170.985C68.4303 137.968 79.2156 120.995 104.164 93.7137C91.7523 90.7148 84.7932 90.8958 72.3818 93.7137C91.2835 59.4822 103.714 40.2788 130.418 6C158.423 37.6582 170.662 57.18 189.145 93.7137C173.116 90.586 165.874 90.9826 154.6 93.7137C180.198 122.093 192.037 138.997 208.491 170.985C192.089 168.442 184.851 168.901 173.255 170.985C198.411 194.207 209.004 209.822 223 241.296C154.473 252.02 113.68 252.935 47.5739 243.481" />
+      </svg>
+    </div>
     <div class="section__loign-rows h-100 d-flex align-items-center w-100" id="login">
       <!-- item 1 -->
       <div class="section__form-img col-7 h-100 d-flex align-items-center justify-content-center">
@@ -569,7 +707,87 @@
       });
 
     </script>
+    <script>
+      const treeContainer = document.getElementById("tree-container");
+      const tree = document.getElementById("tree");
 
+      const treeLength = tree.getTotalLength();
+      const step = treeLength / (60 * 4);
+
+      const starColors = ["#bae6fd", "#fde68a", "#d9f99d", "#fbcfe8"];
+
+      let progress = 0;
+      let position = 0;
+      let progressAtLastStarCreated = 0;
+
+      function ease(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      }
+
+      function createStar() {
+        const star = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        star.setAttribute(
+          "d",
+          "M22.6715 1.87078C21.7629 -0.623594 18.2371 -0.623594 17.3285 1.87078L13.2055 13.2055L1.87078 17.3285C-0.623594 18.2371 -0.623594 21.7629 1.87078 22.6715L13.2055 26.7945L17.3285 38.1292C18.2371 40.6236 21.7629 40.6236 22.6715 38.1292L26.7945 26.7945L38.1292 22.6715C40.6236 21.7629 40.6236 18.2371 38.1292 17.3285L26.7945 13.2055L22.6715 1.87078Z"
+        );
+        star.classList.add("star");
+        star.setAttribute(
+          "style",
+          `--x: ${position.x - 20}px;
+    --y: ${position.y - 20}px;
+    --offset-x: ${Math.random() * 30 - 15}px;
+    --offset-y: ${Math.random() * 30 - 15}px;
+    --scale: ${Math.random() * 0.5 + 0.7};
+    --color: ${starColors[Math.floor(Math.random() * starColors.length)]};`
+        );
+        treeContainer.appendChild(star);
+
+        setTimeout(() => {
+          star.remove();
+        }, 1600);
+      }
+
+      function drawTreeWithStars() {
+        progress = 0;
+        position = 0;
+        progressAtLastStarCreated = 0;
+
+        const interval = setInterval(() => {
+          const progressPercent = progress / treeLength;
+
+          position = tree.getPointAtLength(ease(progressPercent) * treeLength);
+
+          if (progressPercent - progressAtLastStarCreated > 1 / 40) {
+            createStar();
+            progressAtLastStarCreated = progressPercent;
+          }
+
+          progress += step;
+          if (progress > treeLength) {
+            clearInterval(interval);
+          }
+        }, 1000 / 60);
+      }
+
+      drawTreeWithStars();
+      setInterval(drawTreeWithStars, 16000);
+
+      window.onmousemove = (event) => {
+        const clientRect = document.body.getBoundingClientRect();
+        const x = event.clientX;
+        const y = event.clientY;
+
+        document.body.style.setProperty(
+          "--mouse-x",
+          `${(x / clientRect.width) * 4 - 2}px`
+        );
+        document.body.style.setProperty(
+          "--mouse-y",
+          `${(y / clientRect.height) * 4 - 2}px`
+        );
+      };
+
+    </script>
 </body>
 
 </html>

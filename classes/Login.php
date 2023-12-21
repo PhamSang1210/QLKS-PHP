@@ -22,6 +22,7 @@ class Login extends DBConnection
 	public function login()
 	{
 		extract($_POST);
+		// statement
 		$stmt = $this->conn->prepare("SELECT * from users where username = ? and password = ? ");
 		$pw = md5($password);
 		$stmt->bind_param('ss', $username, $pw);

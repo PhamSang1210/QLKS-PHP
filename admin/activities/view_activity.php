@@ -4,6 +4,7 @@ if (isset($_GET['id'])) {
     if ($qry->num_rows > 0) {
         $res = $qry->fetch_array();
         foreach ($res as $k => $v) {
+            // is number
             if (!is_numeric($k))
                 $$k = $v;
         }

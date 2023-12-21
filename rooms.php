@@ -1,6 +1,9 @@
 <?php
 $from = isset($_GET['from']) ? date("Y-m-d", strtotime($_GET['from'])) : "";
+// 12/12/2023 -> string
 $to = isset($_GET['to']) ? date("Y-m-d", strtotime($_GET['to'])) : "";
+// $from = isset($_GET['from']) ? date("d-m-Y", strtotime($_GET['from'])) : "";
+// $to = isset($_GET['to']) ? date("d-m-Y", strtotime($_GET['to'])) : "";
 ?>
 <style>
     .room-holder {

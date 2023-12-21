@@ -3,6 +3,8 @@ require_once('../../config.php');
 if (isset($_GET['id'])) {
 
     $qry = $conn->query("SELECT r.*,rr.name as room_name, rr.type as room_type from `reservation_list` r inner join `room_list` rr on r.room_id = rr.id where r.id = '{$_GET['id']}' ");
+
+    // $qry trả về dữ liệu của MySQL 
     if ($qry->num_rows > 0) {
         $res = $qry->fetch_array();
         foreach ($res as $k => $v) {

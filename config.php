@@ -1,4 +1,5 @@
 <?php
+// Cache -> output 
 ob_start();
 ini_set('date.timezone', 'Asia/Ho_Chi_Minh');
 date_default_timezone_set('Asia/Ho_Chi_Minh');
@@ -20,6 +21,8 @@ function validate_image($file)
     if (!empty($file)) {
         // exit;
         $ex = explode('?', $file);
+        //example $string = "explorer,one";
+        // $array = explode(",",$string); => string -> array
         $file = $ex[0];
         $param = isset($ex[1]) ? '?' . $ex[1] : '';
         if (is_file(base_app . $file)) {
@@ -51,5 +54,6 @@ function isMobileDevice()
     //Otherwise return false..  
     return false;
 }
+// end cache
 ob_end_flush();
 ?>
