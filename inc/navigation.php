@@ -6,7 +6,8 @@
       class="brand-image img-circle elevation-3 bg-black"
       style="width: 1.8rem;height: 1.8rem;max-height: unset;object-fit:scale-down;object-position:center center">
     <span class="brand-text font-weight-light">
-      <?php echo $_settings->info('short_name') ?>
+      <?php echo $_settings->info('short_name');
+      ?>
     </span>
   </a>
   <!-- Sidebar -->

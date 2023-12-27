@@ -235,7 +235,7 @@
 
   .git {
     position: fixed;
-    top: 530px;
+    top: 556px;
     bottom: 20px;
     right: 10px;
     margin: 10px;
@@ -336,7 +336,7 @@
   /* Hotline */
   .header__hotline {
     position: fixed;
-    top: 460px;
+    top: 496px;
     bottom: 20px;
     right: 10px;
     margin: 10px;

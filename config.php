@@ -23,6 +23,9 @@ function validate_image($file)
         $ex = explode('?', $file);
         //example $string = "explorer,one";
         // $array = explode(",",$string); => string -> array
+        // 
+
+        // var
         $file = $ex[0];
         $param = isset($ex[1]) ? '?' . $ex[1] : '';
         if (is_file(base_app . $file)) {
