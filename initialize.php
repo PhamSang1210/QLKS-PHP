@@ -13,7 +13,7 @@ if (!defined('DB_USERNAME'))
 if (!defined('DB_PASSWORD'))
     define('DB_PASSWORD', "");
 if (!defined('DB_NAME'))
-    define('DB_NAME', "orms_db1");
+    define('DB_NAME', "qlks_db");
 if (!defined('contact_hotline'))
     define('contact', "uploads/hotline-panda.png");
 if (!defined('tuan_loc'))
