@@ -1,4 +1,5 @@
 # Hướng dẫn cài
+Đặt tên file là: orms
 
 1. Mở XAMPP sql
 
